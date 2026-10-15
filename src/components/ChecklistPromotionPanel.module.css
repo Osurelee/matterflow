@@ -1,0 +1,15 @@
+.panel { border-top: 1px solid #e5e7eb; padding: 16px 0; display: grid; gap: 10px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.top div { display: grid; gap: 3px; }
+.top span, .preview p { color: #6b7280; font-size: 13px; }
+.top button, .confirm, .preview button { border: 1px solid #cbd5e1; background: #fff; border-radius: 7px; padding: 7px 10px; cursor: pointer; }
+.preview { display: grid; gap: 9px; }
+.preview p { margin: 0; }
+.preview ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.preview li { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.preview li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.preview li em { color: #64748b; font-size: 12px; font-style: normal; margin-left: auto; }
+.preview li button { padding: 3px 7px; }
+.confirm { justify-self: start; color: #1d4ed8; }
+.error { color: #b91c1c; margin: 0; font-size: 13px; }
+.error button { margin-left: 8px; }

@@ -1,0 +1,104 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791795724286,
+      "tag": "0000_watery_mentallo",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791796921129,
+      "tag": "0001_m1_02_hardening",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791823000000,
+      "tag": "0002_m3_handling",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1791823113608,
+      "tag": "0003_m4_body",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1791827361405,
+      "tag": "0004_m4_checklist",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1791828000000,
+      "tag": "0005_m4_media",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1791860000000,
+      "tag": "0006_m4_audio_duration",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1791861000000,
+      "tag": "0007_m4_progress_audio_links",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1791862000000,
+      "tag": "0008_m4_unified_capture",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1791863000000,
+      "tag": "0009_m5_01_independent_items",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1791864000000,
+      "tag": "0010_m5_03_tree_guards",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "6",
+      "when": 1791865000000,
+      "tag": "0011_m5_04_structure_batches",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "6",
+      "when": 1791866000000,
+      "tag": "0012_m5_02_project_sections",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1791867000000,
+      "tag": "0013_m5_09_task_references",
+      "breakpoints": true
+    }
+  ]
+}

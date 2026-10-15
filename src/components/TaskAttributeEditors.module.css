@@ -1,0 +1,91 @@
+/* UX-03 行内属性编辑器样式：弹层锚定触发控件附近，桌面绝对定位、窄屏底部浮层。 */
+.anchor{position:relative;display:inline-flex}
+.triggerWrap{display:inline-flex;align-items:center;gap:5px}
+
+.chip{display:inline-flex;align-items:center;gap:5px;min-height:30px;padding:0 10px;border:1px solid #e3e9e5;border-radius:8px;background:#f7faf8;color:#5b6b61;font-size:12px;font-weight:600;white-space:nowrap;cursor:pointer;transition:background .12s,border-color .12s,color .12s}
+.chip:hover:not(:disabled){background:#edf4f0;border-color:#cfdcd3;color:#2f5c44}
+.chip:focus-visible{outline:2px solid #2a8056;outline-offset:1px}
+.chip:disabled{opacity:.55;cursor:default}
+.chipAdd{border-style:dashed;color:#7d8f83;background:#fff}
+.chipActive{border-color:#9fc6ad;background:#eaf4ee;color:#276c4a}
+.chipAdd.chipActive{border-style:solid}
+
+.tone_todo{background:#f1f3f1;color:#748078;border-color:#e4e9e5}
+.tone_inProgress{background:#eef3fa;color:#58759a;border-color:#dbe4f2}
+.tone_waiting{background:#f8f3e7;color:#9b7a37;border-color:#efe5cd}
+.tone_done{background:#edf5ef;color:#53805e;border-color:#dcebdd}
+.tone_cancelled{background:#f7eeee;color:#9a6f70;border-color:#ecdedf}
+.tone_overdue{background:#fdf1ed;color:#b04a2d;border-color:#f0d6ca;font-weight:700}
+.tone_due{background:#fdf8ec;color:#a0741f;border-color:#f0e3c4}
+.tone_accent{background:#eaf4ee;color:#2f6e4c;border-color:#cfe3d6;font-weight:700}
+.tone_muted{background:#fbfcfb;color:#8a978e;border-color:#eef1ee}
+
+.panel{position:absolute;top:calc(100% + 6px);right:0;z-index:60;min-width:236px;max-width:300px;display:grid;gap:8px;padding:12px 13px;border:1px solid #dce5df;border-radius:11px;background:#fff;box-shadow:0 16px 44px rgba(19,42,29,.16);animation:panelIn .13s ease-out}
+.panelLeft{right:auto;left:0}
+.panelWide{min-width:260px}
+@keyframes panelIn{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){
+  .panel{position:fixed;top:auto;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));max-width:none;min-width:0;animation:panelUp .16s ease-out}
+  .chip{min-height:34px;font-size:12.5px}
+}
+@keyframes panelUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.panelTitle{color:#33453a;font-size:12px;font-weight:750}
+.panelCurrent{color:#8b978f;font-size:11px}
+.options{display:grid;gap:4px}
+.option{min-height:33px;padding:0 10px;border:1px solid #e3e9e5;border-radius:8px;background:#fbfcfb;color:#4c5c52;font-size:12px;font-weight:600;text-align:left;cursor:pointer;transition:all .12s}
+.option:hover:not(:disabled){background:#edf4f0;border-color:#cfdcd3;color:#2f5c44}
+.option:disabled{opacity:.5;cursor:default}
+.optionChosen{border-color:#9fc6ad;background:#eaf4ee;color:#276c4a}
+.optionCurrent{border-color:#bcd8c5;background:#f2f8f4}
+
+.reasonField{display:grid;gap:4px;color:#59665e;font-size:11px}
+.reasonField textarea{width:100%;min-height:68px;padding:8px;border:1px solid #dfe7e1;border-radius:7px;background:#fff;color:#2d3c33;font:inherit;font-size:12px;resize:vertical}
+.reasonField textarea:focus{outline:none;border-color:#85b493;box-shadow:0 0 0 3px #2c80551a}
+.reasonField input{width:100%;min-width:0;height:33px;padding:0 9px;border:1px solid #dfe7e1;border-radius:7px;background:#fff;color:#2d3c33;font:inherit;font-size:12px}
+.reasonField input:focus{outline:none;border-color:#85b493;box-shadow:0 0 0 3px #2c80551a}
+
+.inlineSelect{display:grid;gap:4px;color:#59665e;font-size:11px}
+.inlineSelect select{height:33px;padding:0 8px;border:1px solid #dfe7e1;border-radius:7px;background:#fff;color:#2d3c33;font:inherit;font-size:12px}
+
+.dateRow{display:grid;grid-template-columns:1fr auto auto;align-items:end;gap:7px}
+.dateQuickActions{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:5px;margin-top:1px}
+.dateQuickAction{height:28px;padding:0 8px;border:1px solid #dfe8e1;border-radius:7px;background:#f8fbf9;color:#53705e;font-size:11px;font-weight:600;cursor:pointer}
+.dateQuickAction:hover:not(:disabled){background:#edf6ef;border-color:#b8d2be;color:#2f6948}
+.dateQuickAction:disabled{opacity:.5;cursor:default}
+.dateLabel{display:grid;gap:4px;color:#59665e;font-size:11px}
+.dateLabel input{height:33px;padding:0 8px;border:1px solid #dfe7e1;border-radius:7px;background:#fff;color:#2d3c33;font:inherit;font-size:12px;color-scheme:light}
+.dateLabel input:disabled{opacity:.55}
+.dateLabel input:focus{outline:none;border-color:#85b493;box-shadow:0 0 0 3px #2c80551a}
+.clearButton{height:33px;padding:0 9px;border:1px solid #e3e9e5;border-radius:7px;background:#fff;color:#8a6a52;font-size:11px;font-weight:600;cursor:pointer}
+.clearButton:hover:not(:disabled){background:#fdf6f1;border-color:#e6d4c6}
+.clearButton:disabled{opacity:.5;cursor:default}
+
+.hint{color:#829087;font-size:10.5px;line-height:1.5}
+.hintWarn{color:#a66d31;font-size:10.5px;line-height:1.5}
+.fieldError{color:#b04a2d;font-size:11px;line-height:1.5}
+.panelActions{display:flex;justify-content:flex-end;gap:6px;margin-top:2px}
+.panelCancel{height:33px;padding:0 11px;border:1px solid #e2e8e3;border-radius:8px;background:#fff;color:#68766e;font-size:11px;font-weight:600;cursor:pointer}
+.panelCancel:hover:not(:disabled){background:#f3f7f4}
+.panelConfirm{height:33px;padding:0 11px;border:1px solid #24764f;border-radius:8px;background:#24764f;color:#fff;font-size:11px;font-weight:700;cursor:pointer}
+.panelConfirm:hover:not(:disabled){background:#1e6947}
+.panelConfirm:disabled{border-color:#dce5de;background:#dce5de;color:#95a399;cursor:default}
+
+/* ============ 2026-10-13 第一步改版：行内属性控件可读字号 ============ */
+.chip{font-size:13px;min-height:32px;padding:0 12px;border-radius:9px}
+.rowAttributes .chip,.detailAttributeBar .chip{font-size:12.5px}
+.panelTitle{font-size:13px}
+.panelCurrent{font-size:12px}
+.option{min-height:36px;font-size:13px;padding:0 12px}
+.reasonField{font-size:12px}
+.reasonField textarea,.reasonField input{font-size:13px}
+.inlineSelect{font-size:12px}
+.inlineSelect select{height:36px;font-size:13px}
+.dateLabel{font-size:12px}
+.dateLabel input{height:36px;font-size:13px}
+.clearButton{height:36px;font-size:12px;padding:0 11px}
+.hint,.hintWarn{font-size:12px;line-height:1.5}
+.fieldError{font-size:12px}
+.panelCancel,.panelConfirm{height:36px;font-size:13px;padding:0 13px;border-radius:9px}
+.panel{min-width:248px;padding:14px 14px}
+@media(max-width:760px){.chip{font-size:13px;min-height:36px}}

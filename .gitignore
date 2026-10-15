@@ -1,0 +1,25 @@
+# Dependencies and build output
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local databases, backups, and logs
+*.db
+*.sqlite
+*.sqlite3
+backups/
+*.log
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/

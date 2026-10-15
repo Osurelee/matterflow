@@ -1,0 +1,44 @@
+{
+  "name": "tasks",
+  "version": "0.1.0",
+  "private": true,
+  "description": "通用事务管理平台（应用名 tasks，公网入口 /tasks）",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development next dev -H 127.0.0.1 -p 3100",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production next start -H 127.0.0.1 -p 3100",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "NODE_ENV=development drizzle-kit generate",
+    "db:migrate": "NODE_ENV=production node scripts/migrate.mjs",
+    "db:migrate:dev": "NODE_ENV=development node scripts/migrate.mjs",
+    "db:init-account": "NODE_ENV=production node scripts/init-account.mjs",
+    "db:init-account:dev": "NODE_ENV=development node scripts/init-account.mjs",
+    "db:reset-password": "NODE_ENV=production node scripts/reset-password.mjs",
+    "db:reset-password:dev": "NODE_ENV=development node scripts/reset-password.mjs",
+    "db:backup": "NODE_ENV=production node scripts/backup.mjs",
+    "db:backup:dev": "NODE_ENV=development node scripts/backup.mjs",
+    "db:restore": "node scripts/restore.mjs",
+    "test:m1": "npm run build && node scripts/test-m1.mjs",
+    "test:m2": "npm run build && node scripts/test-m1.mjs",
+    "test:m4": "npm run build && node --no-warnings --experimental-strip-types scripts/test-m4-body.mjs && node --no-warnings --experimental-strip-types scripts/test-m4-drafts.mjs && node --no-warnings --experimental-strip-types scripts/test-m4-checklist.mjs && node --no-warnings --experimental-strip-types scripts/test-m4-media.mjs && node scripts/test-m1.mjs",
+    "test:m5": "npm run test:m4 && node scripts/test-m5-migration.mjs && node scripts/test-m5-04.mjs && node scripts/test-m5-02.mjs && node scripts/test-m5-05.mjs && node scripts/test-m5-06.mjs && node scripts/test-m5-07.mjs && node scripts/test-m5-08.mjs && node scripts/test-m5-09.mjs"
+  },
+  "dependencies": {
+    "better-sqlite3": "13.0.3",
+    "drizzle-orm": "0.45.4",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "9.6.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "drizzle-kit": "0.31.11",
+    "typescript": "7.0.2"
+  }
+}

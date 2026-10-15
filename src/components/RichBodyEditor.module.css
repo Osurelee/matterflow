@@ -1,0 +1,38 @@
+.editor{display:grid;gap:8px}
+.modeBar{display:flex;gap:4px;align-items:center}
+.modeBar button{padding:5px 9px;border:1px solid #e2e8e3;border-radius:6px;background:#fff;color:#748178;font-size:11px;cursor:pointer}
+.modeBar button.active{border-color:#bcd8c5;background:#eef6f0;color:#276c4a;font-weight:700}
+.toolbar{display:flex;flex-wrap:wrap;gap:4px}
+.toolbar button{min-width:28px;height:28px;padding:0 7px;border:1px solid #e2e8e3;border-radius:6px;background:#fbfcfb;color:#5d6b63;font-size:11px;font-weight:600;cursor:pointer}
+.toolbar button:hover:not(:disabled){border-color:#bbd3c2;color:#276c4a}
+.toolbar button:disabled{opacity:.45;cursor:default}
+.visualInput,.sourceInput,.preview{width:100%;min-height:180px;padding:12px;border:1px solid #dfe7e1;border-radius:8px;background:#fff;color:#2d3c33;font:inherit;font-size:13px;line-height:1.7;overflow:auto}
+.visualInput:focus,.sourceInput:focus{outline:none;border-color:#85b493;box-shadow:0 0 0 3px #2c80551a}
+.visualInput:empty:before{content:attr(data-placeholder);color:#a2ada5;pointer-events:none}
+.visualInput h1,.visualInput h2,.visualInput h3,.preview h1,.preview h2,.preview h3{margin:8px 0 5px;color:#243a2e;letter-spacing:-.02em}
+.visualInput h1,.preview h1{font-size:20px}.visualInput h2,.preview h2{font-size:17px}.visualInput h3,.preview h3{font-size:15px}
+.visualInput h4,.preview h4{font-size:14px;margin:8px 0 4px;color:#2c4436}
+.visualInput h5,.visualInput h6,.preview h5,.preview h6{font-size:13px;margin:8px 0 4px;color:#53645a}
+.visualInput hr,.preview hr{border:0;border-top:1px solid #e2e9e4;margin:10px 0}
+.visualInput p,.preview p{margin:6px 0}.visualInput ul,.visualInput ol,.preview ul,.preview ol{margin:6px 0;padding-left:20px}.visualInput ul,.preview ul{list-style-type:disc}.visualInput ol,.preview ol{list-style-type:decimal}.visualInput ul ul,.preview ul ul{list-style-type:circle}.visualInput ul ul ul,.preview ul ul ul{list-style-type:square}.visualInput ol ol,.preview ol ol{list-style-type:lower-alpha}.visualInput ol ol ol,.preview ol ol ol{list-style-type:lower-roman}
+.visualInput blockquote,.preview blockquote{margin:7px 0;padding:4px 0 4px 10px;border-left:2px solid #d6e3da;color:#5f6f66}
+.visualInput pre,.preview pre{margin:7px 0;padding:9px;border-radius:7px;background:#f2f5f3;overflow:auto}.visualInput code,.preview code{padding:1px 4px;border-radius:4px;background:#eef2ef;font-size:11.5px}
+.visualInput a,.preview a{color:#276c4a}.sourceInput{resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
+.preview{background:#fcfdfc}.preview :global(.bodyUnsafeLink){margin-left:4px;color:#a4573c;font-size:11px}.preview :global(.bodyAsset){display:inline-block;padding:3px 7px;border:1px dashed #cfdcd3;border-radius:6px;background:#f4f8f5;color:#6d7c73;font-size:11px}
+.legacyWrap{display:grid;gap:9px}.legacyHint{margin:0;padding:9px 10px;border:1px dashed #dfe7e1;border-radius:7px;background:#fbfcfb;color:#829087;font-size:11px;line-height:1.5}.convertButton{justify-self:start;padding:7px 10px;border:1px solid #bbd3c2;border-radius:6px;background:#eef6f0;color:#276c4a;font-size:11px;font-weight:650;cursor:pointer}
+
+.visualInput :global(.bodyAssetImage){display:inline-block;max-width:min(100%,360px);max-height:240px;object-fit:contain;border-radius:7px;vertical-align:middle}
+.preview :global(.bodyAssetImage){display:inline-block;max-width:min(100%,360px);max-height:240px;object-fit:contain;border-radius:7px;vertical-align:middle}
+.visualInput :global(.bodyTaskItem),.preview :global(.bodyTaskItem){list-style:none;margin-left:-20px}
+.visualInput :global(.bodyTaskItem input[type=checkbox]),.preview :global(.bodyTaskItem input[type=checkbox]){margin-right:6px;vertical-align:-1px;cursor:pointer;accent-color:#287a53}
+.visualInput table,.preview table{border-collapse:collapse;margin:7px 0;font-size:13px}
+.visualInput th,.visualInput td,.preview th,.preview td{border:1px solid #dfe7e1;padding:4px 8px;min-width:40px;text-align:left;vertical-align:top}
+.visualInput th,.preview th{background:#f2f7f3;font-weight:700}
+
+/* 2026-10-13 第一步改版：正文编辑控件可读字号 */
+.modeBar button{font-size:12px;padding:6px 10px}
+.toolbar button{font-size:12px;min-width:30px;height:30px}
+.visualInput,.sourceInput,.preview{font-size:14px}
+.sourceInput{font-size:13px}
+.visualInput code,.preview code{font-size:12.5px}
+.legacyHint{font-size:12px}.convertButton{font-size:12px;padding:8px 12px}

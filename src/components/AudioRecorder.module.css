@@ -1,0 +1,14 @@
+.panel{display:grid;gap:8px;margin-top:8px;padding:11px;border:1px solid #e5ece6;border-radius:8px;background:#fbfdfb}.head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.head h3{margin:0;color:#405349;font-size:11px}.head span{display:block;margin-top:3px;color:#929e96;font-size:9px}.indicator{flex:0 0 auto;color:#748178;font-size:9px}.indicator.live{color:#b3342b;font-weight:700;animation:pulse 1.2s infinite}.controls{display:flex;align-items:center;flex-wrap:wrap;gap:6px}.controls button{padding:6px 9px;border:1px solid #d8e5dc;border-radius:6px;background:#edf6ef;color:#286b48;font-size:10px;font-weight:650;cursor:pointer}.controls .quiet,.progress .quiet{background:#fff;color:#66756b}.controls button:disabled{opacity:.5;cursor:default}.timer{color:#a92c2c;font-variant-numeric:tabular-nums;font-size:13px}.preview{display:grid;gap:5px}.preview audio{width:min(100%,420px);height:36px}.preview>span,.status,.error{margin:0;color:#78857e;font-size:9px;overflow-wrap:anywhere}.error{color:#a34a35}.progress{display:flex;align-items:center;gap:7px;color:#75837a;font-size:9px}.progress progress{width:min(180px,55%);height:7px;accent-color:#267653}.progress button{padding:4px 6px;border:1px solid #e1e9e3;border-radius:5px;font-size:9px}@keyframes pulse{50%{opacity:.45}}
+/* 2026-10-13 第一步改版：录音控件可读字号 */
+.head h3{font-size:13px}.head span{font-size:11px;margin-top:4px}
+.indicator{font-size:11px}
+.controls button{font-size:12px;padding:7px 11px}
+.preview>span,.status,.error{font-size:11px}
+.progress{font-size:11px}.progress button{font-size:11px;padding:5px 8px}
+
+/* 2026-10-13 快速新增改版：嵌入捕获卡片时的扁平样式（去外框，仅保留●录音按钮） */
+.panel.flat{display:grid;gap:6px;border:0;background:transparent;padding:0;margin:0}
+.panel.flat .head{display:none}
+.panel.flat .controls{gap:5px}
+.panel.flat .controls button{padding:6px 12px;font-size:12.5px;border-radius:8px}
+.flatWide{width:100%}
